@@ -1,0 +1,19 @@
+//copy paste the code below into the tinkercad project.
+
+#include <LiquidCrystal.h>
+//Digital PWM number
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
+void setup() 
+{
+  lcd.begin(16, 2);
+  //type what you want to print inside the quotation mark
+  lcd.print("Hello, World");
+}
+
+void loop() 
+{
+  lcd.setCursor(0, 1);
+  //print elapsed time after code start
+  lcd.print(millis() / 1000);
+}
